@@ -1,4 +1,4 @@
-package com.javanauta.usuario.cotroller;
+package com.javanauta.usuario.controller;
 
 import com.javanauta.usuario.business.UsuarioService;
 import com.javanauta.usuario.business.dto.UsuarioDTO;
@@ -44,7 +44,7 @@ public class UsuarioController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping
+    @PutMapping
     public ResponseEntity<UsuarioDTO> atualizaDadoUsuario(@RequestBody UsuarioDTO dto,
                                                           @RequestHeader("Authorization")String token){
        return ResponseEntity.ok(usuarioService.atualizaDadosUsuario(token, dto));
